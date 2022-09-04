@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
+"""This module writes the sensor outputs to a csv file. Nothing
+is written to the console."""
 
 import sys
 import time
@@ -20,7 +22,7 @@ tempsensor.get_calib_param()
 luxsensor.SET_LuxInterrupt(20, 200)
 time.sleep(1)
 
-df = pd.read_csv('./outputs/sensorReadings.csv')
+df = pd.read_csv('./outputs/sensorReadings.csv') # file made beforehand
 
 try:
 	while True:
